@@ -2,6 +2,6 @@
 
 int main()
 {
-  Game game;
+  Game game; //seriously? ugh.
   return 0;
 }
