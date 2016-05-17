@@ -1,6 +1,9 @@
 #include "game.hpp"
 #include "graphics.hpp"
 
+#define FPS 60
+#define MAX_FRAME_TIME 1000 / FPS
+
 Game::Game()
 {
   game_loop();
@@ -8,6 +11,7 @@ Game::Game()
 
 void Game::game_loop()
 {
+  sf::Clock clock;
   while(graphics.get_window()->isOpen()) {
     sf::Event event;
     while(graphics.get_window()->pollEvent(event)) {
@@ -15,7 +19,7 @@ void Game::game_loop()
         graphics.get_window()->close();
     }
 
-    update(1.0f);
+    update(std::min(clock.restart().asMilliseconds(), MAX_FRAME_TIME));
     draw();
   }
 }

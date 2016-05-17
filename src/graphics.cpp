@@ -20,7 +20,7 @@ void Graphics::draw()
 
 void Graphics::update(float elapsed_time)
 {
-
+ 
 }
 
 sf::RenderWindow* Graphics::get_window()
