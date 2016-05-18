@@ -1,4 +1,5 @@
 #include "graphics.hpp"
+#include "globals.hpp"
 
 Graphics graphics;
 
@@ -9,7 +10,7 @@ Graphics::Graphics()
 
 void Graphics::init()
 {
-  window = new sf::RenderWindow{{800, 600}, "The Treetop"};
+  window = new sf::RenderWindow{{SCREEN_WIDTH, SCREEN_HEIGHT}, GAME_TITLE};
 }
 
 void Graphics::draw()

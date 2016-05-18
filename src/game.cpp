@@ -18,7 +18,9 @@ void Game::game_loop()
       if(event.type == sf::Event::Closed)
         graphics.get_window()->close();
     }
-
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+      graphics.get_window()->close(); //todo: replace with pause menu
+    }
     update(std::min(clock.restart().asMilliseconds(), MAX_FRAME_TIME));
     draw();
   }
