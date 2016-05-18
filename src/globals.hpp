@@ -5,9 +5,9 @@
 
 /* Limeoats uses const varibles inside a namespace but preprocesser variables are better.*/
 
-#define SCREEN_WIDTH 800
-#define SCREEN_HEIGHT 600
-#define GAME_TITLE std::string("The Treetop")
+constexpr int SCREEN_WIDTH = 800;
+constexpr int SCREEN_HEIGHT = 600;
+constexpr auto GAME_TITLE = "The Treetop";
 
 /* we use enum class so we MUST do Direction::foo
  * the only problem is, we have to manually make bitwise operators*/
