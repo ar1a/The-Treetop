@@ -1,10 +1,10 @@
 #include "game.hpp"
 #include "graphics.hpp"
 
-#define FPS 60
-#define MAX_FRAME_TIME 1000 / FPS
+constexpr auto FPS = 60;
+constexpr auto MAX_FRAME_TIME =  1000 / FPS;
 
-Game::Game()
+Game::Game() : player("content/spritesheets/characters.png", {0, 0}, {16, 16}, {50, 50})
 {
   game_loop();
 }
@@ -28,7 +28,10 @@ void Game::game_loop()
 
 void Game::draw()
 {
-  graphics.draw();
+  graphics.clear();
+  //Draw here
+  player.draw();
+  graphics.display();
 }
 
 void Game::update(float elapsed_time)

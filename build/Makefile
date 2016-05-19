@@ -231,6 +231,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/linux_test.dir/build.make CMakeFiles/linux_test.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sprite.o: src/sprite.cpp.o
+
+.PHONY : src/sprite.o
+
+# target to build an object file
+src/sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/linux_test.dir/build.make CMakeFiles/linux_test.dir/src/sprite.cpp.o
+.PHONY : src/sprite.cpp.o
+
+src/sprite.i: src/sprite.cpp.i
+
+.PHONY : src/sprite.i
+
+# target to preprocess a source file
+src/sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/linux_test.dir/build.make CMakeFiles/linux_test.dir/src/sprite.cpp.i
+.PHONY : src/sprite.cpp.i
+
+src/sprite.s: src/sprite.cpp.s
+
+.PHONY : src/sprite.s
+
+# target to generate assembly for a file
+src/sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/linux_test.dir/build.make CMakeFiles/linux_test.dir/src/sprite.cpp.s
+.PHONY : src/sprite.cpp.s
+
 src/utils.o: src/utils.cpp.o
 
 .PHONY : src/utils.o
@@ -279,6 +306,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sprite.o"
+	@echo "... src/sprite.i"
+	@echo "... src/sprite.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
