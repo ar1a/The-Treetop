@@ -8,7 +8,6 @@ class Graphics
 {
 public:
   Graphics();
-  void init();
   void draw(sf::Drawable& drawable);
   void display();
   

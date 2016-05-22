@@ -3,14 +3,8 @@
 
 Graphics graphics;
 
-Graphics::Graphics()
+Graphics::Graphics() : window(new sf::RenderWindow{{SCREEN_WIDTH, SCREEN_HEIGHT}, GAME_TITLE})
 {
-  init();
-}
-
-void Graphics::init()
-{
-  window = std::unique_ptr<sf::RenderWindow>(new sf::RenderWindow{{SCREEN_WIDTH, SCREEN_HEIGHT}, GAME_TITLE});
 }
 
 void Graphics::draw(sf::Drawable& drawable)
