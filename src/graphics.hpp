@@ -2,6 +2,7 @@
 #define __GRAPHICS_hpp
 
 #include <SFML/Graphics.hpp>
+#include <memory>
 
 class Graphics
 {
@@ -17,7 +18,7 @@ public:
   sf::RenderWindow* get_window();
 
 private:
-  sf::RenderWindow* window;
+  std::unique_ptr<sf::RenderWindow> window;
   std::map<std::string, sf::Texture> textures;
 };
 

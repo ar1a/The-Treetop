@@ -10,7 +10,7 @@ Graphics::Graphics()
 
 void Graphics::init()
 {
-  window = new sf::RenderWindow{{SCREEN_WIDTH, SCREEN_HEIGHT}, GAME_TITLE};
+  window = std::unique_ptr<sf::RenderWindow>(new sf::RenderWindow{{SCREEN_WIDTH, SCREEN_HEIGHT}, GAME_TITLE});
 }
 
 void Graphics::draw(sf::Drawable& drawable)
@@ -25,7 +25,7 @@ void Graphics::update(float elapsed_time)
 
 sf::RenderWindow* Graphics::get_window()
 {
-  return window;
+  return window.get();
 }
 
 

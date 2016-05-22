@@ -1,0 +1,60 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+FPS	game.cpp	/^constexpr auto FPS = 60;$/;"	v
+Game	game.cpp	/^Game::Game() : player("content\/spritesheets\/characters.png", {0, 0}, {16, 16}, {50, 50})$/;"	f	class:Game
+MAX_FRAME_TIME	game.cpp	/^constexpr auto MAX_FRAME_TIME =  1000 \/ FPS;$/;"	v
+draw	game.cpp	/^void Game::draw()$/;"	f	class:Game
+game_loop	game.cpp	/^void Game::game_loop()$/;"	f	class:Game
+update	game.cpp	/^void Game::update(float elapsed_time)$/;"	f	class:Game
+Game	game.hpp	/^class Game$/;"	c
+__GAME_HPP	game.hpp	2;"	d
+player	game.hpp	/^  Sprite player;$/;"	m	class:Game
+get_opposite_side	globals.cpp	/^sides::Side sides::get_opposite_side(const sides::Side& side)$/;"	f	class:sides
+BOTTOM	globals.hpp	/^    BOTTOM,$/;"	m	class:sides::Side
+DOWN	globals.hpp	/^  DOWN,$/;"	m	class:Direction
+Direction	globals.hpp	/^enum class Direction {$/;"	c
+GAME_TITLE	globals.hpp	/^constexpr auto GAME_TITLE = "The Treetop";$/;"	v
+LEFT	globals.hpp	/^    LEFT,$/;"	m	class:sides::Side
+LEFT	globals.hpp	/^  LEFT,$/;"	m	class:Direction
+NONE	globals.hpp	/^    NONE,$/;"	m	class:sides::Side
+NONE	globals.hpp	/^  NONE,$/;"	m	class:Direction
+RIGHT	globals.hpp	/^    RIGHT,$/;"	m	class:sides::Side
+RIGHT	globals.hpp	/^  RIGHT,$/;"	m	class:Direction
+SCREEN_HEIGHT	globals.hpp	/^constexpr int SCREEN_HEIGHT = 600;$/;"	v
+SCREEN_WIDTH	globals.hpp	/^constexpr int SCREEN_WIDTH = 800;$/;"	v
+Side	globals.hpp	/^  enum class Side {$/;"	c	namespace:sides
+TOP	globals.hpp	/^    TOP,$/;"	m	class:sides::Side
+UP	globals.hpp	/^  UP,$/;"	m	class:Direction
+__GLOBALS_hpp	globals.hpp	2;"	d
+sides	globals.hpp	/^namespace sides {$/;"	n
+Graphics	graphics.cpp	/^Graphics::Graphics()$/;"	f	class:Graphics
+clear	graphics.cpp	/^void Graphics::clear()$/;"	f	class:Graphics
+display	graphics.cpp	/^void Graphics::display()$/;"	f	class:Graphics
+draw	graphics.cpp	/^void Graphics::draw(sf::Drawable& drawable)$/;"	f	class:Graphics
+get_window	graphics.cpp	/^sf::RenderWindow* Graphics::get_window()$/;"	f	class:Graphics
+graphics	graphics.cpp	/^Graphics graphics;$/;"	v
+init	graphics.cpp	/^void Graphics::init()$/;"	f	class:Graphics
+load_image	graphics.cpp	/^sf::Texture Graphics::load_image(const std::string& file_name)$/;"	f	class:Graphics
+update	graphics.cpp	/^void Graphics::update(float elapsed_time)$/;"	f	class:Graphics
+Graphics	graphics.hpp	/^class Graphics$/;"	c
+__GRAPHICS_hpp	graphics.hpp	2;"	d
+textures	graphics.hpp	/^  std::map<std::string, sf::Texture> textures;$/;"	m	class:Graphics
+window	graphics.hpp	/^  std::unique_ptr<sf::RenderWindow> window;$/;"	m	class:Graphics
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+main	main.cpp	/^int main()$/;"	f
+Sprite	sprite.cpp	/^Sprite::Sprite(const std::string& file_name, sf::Vector2i src_pos, sf::Vector2i size, sf::Vector2f dest_pos)$/;"	f	class:Sprite
+draw	sprite.cpp	/^void Sprite::draw()$/;"	f	class:Sprite
+get_bounding_box	sprite.cpp	/^sf::IntRect Sprite::get_bounding_box() const $/;"	f	class:Sprite
+get_collision_side	sprite.cpp	/^sides::Side Sprite::get_collision_side(const sf::IntRect& other) const$/;"	f	class:Sprite
+update	sprite.cpp	/^void Sprite::update(float elapsed_time) {} \/\/TODO: make pure virtual$/;"	f	class:Sprite
+Sprite	sprite.hpp	/^class Sprite$/;"	c
+__SPRITE_hpp	sprite.hpp	2;"	d
+sprite	sprite.hpp	/^  sf::Sprite sprite;$/;"	m	class:Sprite
+texture	sprite.hpp	/^  sf::Texture texture;$/;"	m	class:Sprite
+__UTILS_hpp	utils.hpp	2;"	d
+contains	utils.hpp	/^  bool contains(const C& v, const T& x)$/;"	f	namespace:utils
+split	utils.hpp	/^  std::vector<std::string> split(const std::string& str, char c)$/;"	f	namespace:utils
+utils	utils.hpp	/^namespace utils {$/;"	n
