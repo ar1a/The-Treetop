@@ -7,8 +7,8 @@ class Game
 {
 public:
   Game();
-private:
   void game_loop();
+private:
   void draw();
   void update(float elapsed_time);
   Sprite player;

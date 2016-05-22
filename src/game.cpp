@@ -5,9 +5,7 @@ constexpr auto FPS = 60;
 constexpr auto MAX_FRAME_TIME =  1000 / FPS;
 
 Game::Game() : player("content/spritesheets/characters.png", {0, 0}, {16, 16}, {50, 50})
-{
-  game_loop();
-}
+{}
 
 void Game::game_loop()
 {

@@ -1,7 +1,8 @@
 #include "game.hpp"
 
+Game game;
 int main()
 {
-  Game game; //seriously? ugh.
+  game.game_loop();
   return 0;
 }
